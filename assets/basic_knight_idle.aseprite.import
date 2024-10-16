@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://rx0dnpb3en8r"
+path="res://.godot/imported/basic_knight_idle.aseprite-c35fff1a55e8ea0bb18e56abe885d9e3.res"
+
+[deps]
+
+source_file="res://assets/basic_knight_idle.aseprite"
+dest_files=["res://.godot/imported/basic_knight_idle.aseprite-c35fff1a55e8ea0bb18e56abe885d9e3.res"]
+
+[params]
+

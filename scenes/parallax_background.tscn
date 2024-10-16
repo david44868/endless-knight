@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwfo8ya7s7twh"]
+
+[ext_resource type="Texture2D" uid="uid://dnlq5r4jd5hqg" path="res://assets/grass-Sheet.png" id="1_23yjf"]
+[ext_resource type="Script" path="res://scripts/parallax_background.gd" id="1_u6vs3"]
+[ext_resource type="Texture2D" uid="uid://ddltyuqivdry8" path="res://assets/night.png" id="1_wcjic"]
+[ext_resource type="PackedScene" uid="uid://cne8h4qo73dx2" path="res://scenes/player.tscn" id="4_yf042"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_u6vs3")
+
+[node name="Scenery" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.25, 0.25)
+motion_mirroring = Vector2(1150, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Scenery"]
+texture_filter = 1
+position = Vector2(576, 323.592)
+scale = Vector2(3.27273, 3.68645)
+texture = ExtResource("1_wcjic")
+flip_h = true
+
+[node name="Ground" type="ParallaxLayer" parent="."]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(46, 0)
+motion_scale = Vector2(1.5, 1.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+texture_repeat = 2
+position = Vector2(4, 601)
+scale = Vector2(3.13, 3.13)
+texture = ExtResource("1_23yjf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Ground"]
+texture_repeat = 2
+position = Vector2(16.52, 2483.33)
+scale = Vector2(9.7969, 9.80316)
+texture = ExtResource("1_23yjf")
+
+[node name="Player" parent="." instance=ExtResource("4_yf042")]
+position = Vector2(134, 501)
+scale = Vector2(5, 5)
